@@ -15,6 +15,11 @@ var telaAtiva = 1;
 var xa,ya
 xa = 1
 ya = 1
+var imgmenu;
+
+function preload() {
+ imgmenu = loadImage('jogolopbg.jpg');  
+}
 function setup() {
   createCanvas(700, 400);
 }
@@ -28,14 +33,29 @@ function draw()
       menu();
       break;
     case 2:
-      abelha();
-      break;  
+      regras();
+      break;
+      
     case 3:
       sair();
-      break; 
+      break;
+    
   }
 }
+function jogar() {
+   //R, G, B
 
+   
+  fill('white');
+  stroke('black');
+  strokeWeight(1);
+  
+  textSize(28);
+  fill('black');
+  
+  
+  window.close();
+}
 function sair() {
    //R, G, B
 
@@ -68,6 +88,7 @@ function regras() {
 
 function menu() {
   //R, G, B
+  background(imgmenu)
   fill('white');
   stroke('black');
   strokeWeight(1);
@@ -79,7 +100,7 @@ function menu() {
   fill('purple');
   
   text('Jogar', 40, 55);
-  text('Abelha', 40, 125);
+  text('Regras', 40, 125);
   text('Sair', 40, 195);
   
   noFill();
@@ -122,7 +143,7 @@ function keyPressed() {
        }
     }
    
-  }
+ }
   console.log("opcao: "+opcao);
   console.log("telaAtiva: "+telaAtiva);
   {}
@@ -136,53 +157,53 @@ function keyPressed() {
   
 }
 
-function abelha() {
+//function abelha() {
   //Stroke();
-  if(cena==1){
-      cena1();
-      cena=2;
-  } else {
-     cena2();
-    cena=1;
-  } 
-    xa++; 
-   if (keyIsDown(RIGHT_ARROW))
-    xa+=5;
+  //if(cena==1){
+    //  cena1();
+      //cena=2;
+ // } else {
+    // cena2();
+   // cena=1;
+ // } 
+  //  xa++; 
+   //if (keyIsDown(RIGHT_ARROW))
+    //xa+=5;
 
-  if (keyIsDown(LEFT_ARROW))
-    xa-=5;
+  //if (keyIsDown(LEFT_ARROW))
+  //  xa-=5;
 
- if (keyIsDown(UP_ARROW))
-    ya-=5;
+ //if (keyIsDown(UP_ARROW))
+   // ya-=5;
 
-  if (keyIsDown(DOWN_ARROW))
-    ya+=5;
-}
+ // if (keyIsDown(DOWN_ARROW))
+  //  ya+=5;
+//}
 
-function cena1() {
-    fill("#62462B");
-  ellipse(xa+350,ya+200,100,100);
-  line(xa+310,ya+170,xa+250,ya+120);
-     line(xa+390,ya+170,xa+450,ya+120);
-  fill(255,255,0);
-  ellipse(xa+350,ya+300,100,160)
-  fill(255,255,0);
-  ellipse(xa+270,ya+300,100,50)
-  ellipse(xa+420,ya+300,100,50)
-}
+//function cena1() {
+   // fill("#62462B");
+ // ellipse(xa+350,ya+200,100,100);
+ // line(xa+310,ya+170,xa+250,ya+120);
+ //    line(xa+390,ya+170,xa+450,ya+120);
+ // fill(255,255,0);
+  //ellipse(xa+350,ya+300,100,160)
+ // fill(255,255,0);
+ // ellipse(xa+270,ya+300,100,50)
+ // ellipse(xa+420,ya+300,100,50)
+//}
 
-function cena2() {
-     fill("#62462B");
-  ellipse(xa+350,ya+200,100,100);
-  line(xa+310,ya+170,xa+250,ya+120);
-     line(xa+390,ya+170,xa+450,ya+120);
-  fill(255,255,0);
-  ellipse(xa+350,ya+300,100,160)
-  fill(0,0,0);
-  ellipse(xa+270,ya+300,100,50)
-  ellipse(xa+420,ya+300,100,50)
+//function cena2() {
+    // fill("#62462B");
+  //ellipse(xa+350,ya+200,100,100);
+  //line(xa+310,ya+170,xa+250,ya+120);
+  //   line(xa+390,ya+170,xa+450,ya+120);
+  //fill(255,255,0);
+  //ellipse(xa+350,ya+300,100,160)
+  //fill(0,0,0);
+  //ellipse(xa+270,ya+300,100,50)
+  //ellipse(xa+420,ya+300,100,50)
 
-}
+//}
 
  </script>
 
