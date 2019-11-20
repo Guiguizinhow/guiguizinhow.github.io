@@ -27,7 +27,7 @@ function setup() {
 function draw()
 {
   
-  background(50,87,87);
+  background("#215E21");
   switch(telaAtiva) {
     case 1:
       menu();
@@ -80,13 +80,10 @@ function regras() {
   stroke('black');
   strokeWeight(1);
   
-  textSize(28);
+  textSize(27);
   fill('black');
   
-  text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases, onde as fases são relacionadas as classe dos animais."+ 
-       "o objetivo do jogador é capiturar os animais pertencentes a cada classe referente a fase." + 
-      " o jogador tem 5 vidas durante todas as fases. Ao capturar o animal que não pertence a classe refernte a fase, " +
-      "o jogador perdera uma vida, voltando à primeira fase caso perca as 5 vidas.", 40, 55);
+  text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases,"  + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + "o objetivo do jogador é capiturar os animais" + "\n" + " pertencentes a cada classe referente a fase." + "\n" +  " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" + "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" + "\n" + " perca as 5 vidas.", 40, 50);
 }
 
 function menu() {
