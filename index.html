@@ -17,7 +17,8 @@ xa = 1
 ya = 1
 var imgmenu;
 function preload() {
- imgmenu = loadImage('jogolopbg.jpg');  
+ imgmenu = loadImage('jogolopbg.jpg'); 
+//botar as imagens
 }
 function setup() {
   createCanvas(700, 400);
@@ -28,7 +29,7 @@ function draw()
   background("#215E21");
   switch(telaAtiva) {
     case 1:
-      menu();
+      menu()
       break;
     case 2:
       regras();
@@ -37,11 +38,12 @@ function draw()
     case 3:
       sair();
       break;
-    
+  case 4:
+      jogar()
+      break;
   }
 }
 function jogar() {
-   //R, G, B
    
   fill('white');
   stroke('black');
