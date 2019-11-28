@@ -16,14 +16,12 @@ var xa,ya
 xa = 1
 ya = 1
 var imgmenu;
-
 function preload() {
  imgmenu = loadImage('jogolopbg.jpg');  
 }
 function setup() {
   createCanvas(700, 400);
 }
-
 function draw()
 {
   
@@ -44,13 +42,19 @@ function draw()
 }
 function jogar() {
    //R, G, B
+   
   fill('white');
   stroke('black');
-  strokeWeight(1)
+  strokeWeight(1);
   
+  textSize(28);
+  fill('black');
+  
+  
+  window.close();
+}
 function sair() {
    //R, G, B
-
    
   fill('white');
   stroke('black');
@@ -62,11 +66,8 @@ function sair() {
   text('saindo', 40, 55);
   window.close();
 }
-
-
 function regras() {
    //R, G, B
-
    
   fill('white');
   stroke('black');
@@ -77,7 +78,6 @@ function regras() {
   
   text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases,"  + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + "o objetivo do jogador é capiturar os animais" + "\n" + " pertencentes a cada classe referente a fase." + "\n" +  " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" + "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" + "\n" + " perca as 5 vidas.", 40, 50);
 }
-
 function menu() {
   //R, G, B
   background(imgmenu)
@@ -102,7 +102,6 @@ function menu() {
   stroke(0, 0, 0);
   strokeWeight(2)
 }
-
 function keyPressed() {
   console.log(keyCode);
   
@@ -145,12 +144,8 @@ function keyPressed() {
   
   
   
-
   
 }
-
-
-
  </script>
 
   <style> body {padding: 0; margin: 0;} </style>
