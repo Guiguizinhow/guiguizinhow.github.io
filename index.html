@@ -29,17 +29,17 @@ function draw()
   background("#215E21");
   switch(telaAtiva) {
     case 1:
-      menu()
+     jogar(); 
       break;
     case 2:
-    jogar();
+   regras();
       break;
       
     case 3:
-      regras();
+    sair()  ;
       break;
   case 4:
-     sair();
+     menu() ;
       break;
   }
 }
@@ -68,7 +68,13 @@ function regras() {
   textSize(27);
   fill('black');
   
-  text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases,"  + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + "o objetivo do jogador é capiturar os animais" + "\n" + " pertencentes a cada classe referente a fase." + "\n" +  " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" + "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" + "\n" + " perca as 5 vidas.", 40, 50);
+  text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases," 
+       + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + 
+       "o objetivo do jogador é capiturar os animais" + "\n" +
+       " pertencentes a cada classe referente a fase." + "\n" +  
+       " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" +
+       "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" +
+       "\n" + " perca as 5 vidas.", 40, 50);
 }
     function sair() {
    //R, G, B
@@ -110,9 +116,9 @@ function menu() {
 function keyPressed() {
   console.log(keyCode);
   
-  /*if(telaAtiva==2 || telaAtiva==3)
+  if(telaAtiva==2 || telaAtiva==3)
       telaAtiva
-        =1;*/
+        =1;
   
   if (keyCode === ENTER) 
       telaAtiva=opcao;
