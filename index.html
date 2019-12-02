@@ -17,8 +17,7 @@ xa = 1
 ya = 1
 var imgmenu;
 function preload() {
- imgmenu = loadImage('jogolopbg.jpg'); 
-//botar as imagens
+ imgmenu = loadImage('jogolopbg.jpg');  
 }
 function setup() {
   createCanvas(700, 400);
@@ -29,20 +28,20 @@ function draw()
   background("#215E21");
   switch(telaAtiva) {
     case 1:
-     jogar(); 
+      menu();
       break;
     case 2:
-   regras();
+      regras();
       break;
+      
     case 3:
-    sair()  ;
+      sair();
       break;
-  case 4:
-     menu() ;
-      break;
+    
   }
 }
 function jogar() {
+   //R, G, B
    
   fill('white');
   stroke('black');
@@ -50,13 +49,11 @@ function jogar() {
   
   textSize(28);
   fill('black');
- 
-
+  
+  
   window.close();
 }
-
-
-    function sair() {
+function sair() {
    //R, G, B
    
   fill('white');
@@ -69,7 +66,7 @@ function jogar() {
   text('saindo', 40, 55);
   window.close();
 }
-    function regras() {
+function regras() {
    //R, G, B
    
   fill('white');
@@ -79,13 +76,7 @@ function jogar() {
   textSize(27);
   fill('black');
   
-  text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases," 
-       + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + 
-       "o objetivo do jogador é capiturar os animais" + "\n" +
-       " pertencentes a cada classe referente a fase." + "\n" +  
-       " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" +
-       "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" +
-       "\n" + " perca as 5 vidas.", 40, 50);
+  text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases,"  + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + "o objetivo do jogador é capiturar os animais" + "\n" + " pertencentes a cada classe referente a fase." + "\n" +  " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" + "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" + "\n" + " perca as 5 vidas.", 40, 50);
 }
 function menu() {
   //R, G, B
@@ -114,10 +105,9 @@ function menu() {
 function keyPressed() {
   console.log(keyCode);
   
-
- //if(telaAtiva==2 || telaAtiva==3)
-      //telaAtiva
-        //=1;
+  /*if(telaAtiva==2 || telaAtiva==3)
+      telaAtiva
+        =1;*/
   
   if (keyCode === ENTER) 
       telaAtiva=opcao;
@@ -148,12 +138,6 @@ function keyPressed() {
   console.log("opcao: "+opcao);
   console.log("telaAtiva: "+telaAtiva);
   {}
-  
-  
-  
-  
-  
-  
   
 }
  </script>
