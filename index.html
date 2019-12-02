@@ -32,14 +32,14 @@ function draw()
       menu()
       break;
     case 2:
-      regras();
+    jogar();
       break;
       
     case 3:
-      sair();
+      regras();
       break;
   case 4:
-      jogar()
+     sair();
       break;
   }
 }
@@ -51,9 +51,9 @@ function jogar() {
   
   textSize(28);
   fill('black');
-  
-  
-  window.close();
+   
+  background(0,255,0)
+  //window.close();
 }
 function sair() {
    //R, G, B
