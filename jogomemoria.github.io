@@ -6,9 +6,9 @@ var xd;
 var yd;
 var estadoDisparo= false;
 
-let imgJogador;
-function preload() {
-  imgJogador = loadImage('seta.jpg');
+//let imgJogador;
+//function preload() {
+ // imgJogador = loadImage('seta.jpg');
 }
 function setup() {
   createCanvas(500, 500);
@@ -16,9 +16,9 @@ function setup() {
 
 function draw() {
   background(220);
-  //ellipse(x,y,50,50);
-  imageMode(CENTER);
-  image(imgJogador,x,y);
+  ellipse(x,y,50,50);
+ // imageMode(CENTER);
+  //image(imgJogador,x,y);
   if(keyIsDown(RIGHT_ARROW)){
     X=X+5;
   }
