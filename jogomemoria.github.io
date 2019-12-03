@@ -5,6 +5,7 @@ html><html>
   <title>z</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
 var xo = 0;
 var yo = 50;
 var X=100;
