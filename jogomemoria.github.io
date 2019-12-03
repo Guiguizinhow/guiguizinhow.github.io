@@ -35,7 +35,8 @@ function draw() {
  x=x+3;
  If(x>width)
   X=0;
- If(KeyIsDown(control) && estadoDisparo==false){  
+ If((KeyIsDown(control)) && (estadoDisparo==false))
+ {  
   xd=x
   yd = y
   estadoDisparo=true
