@@ -1,69 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+var x = 200
+var y = 350
+var xo = 0;
+var yo = 50;
 
-  <title>Memory Game</title>
+let imgJogador;
+function preload() {
+  imgJogador = loadImage('assets/laDefense.jpg');
+}
+function setup() {
+  createCanvas(500, 500);
+}
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <section class="memory-game">
-    <div class="memory-card" data-framework="aurelia">
-      <img class="front-face" src="img/aurelia.svg" alt="Aurelia" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="aurelia">
-      <img class="front-face" src="img/aurelia.svg" alt="Aurelia" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
+function draw() {
+  background(220);
+  //ellipse(x,y,40,40);
+  imageMode(CENTER);
+  image(imgJogador,x,y);
+  if(keyIsDown(RIGHT_ARROW)){
+    X=X+5;
+  }
+  if(keyIsDown(UP_ARROW)){
+    X=X-5;
+  }
+  if(keyIsDown(DOWN_ARROW)){
+    X=X+5;
+  }
+  if(keyIsDown(LEFT_ARROW)){
+    X=X-5;
+ }
+ 
+  rect(xo,xo,40,40)
+  xo=xo+4
+  if(xo > 500){
+    xo = -random(1000)
+    console.log(xo)
+  }
+}
 
-    <div class="memory-card" data-framework="vue">
-      <img class="front-face" src="img/vue.svg" alt="Vue" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="vue">
-      <img class="front-face" src="img/vue.svg" alt="Vue" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
 
-    <div class="memory-card" data-framework="angular">
-      <img class="front-face" src="img/angular.svg" alt="Angular" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="angular">
-      <img class="front-face" src="img/angular.svg" alt="Angular" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
 
-    <div class="memory-card" data-framework="ember">
-      <img class="front-face" src="img/ember.svg" alt="Ember" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="ember">
-      <img class="front-face" src="img/ember.svg" alt="Ember" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-
-    <div class="memory-card" data-framework="backbone">
-      <img class="front-face" src="img/backbone.svg" alt="Backbone" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="backbone">
-      <img class="front-face" src="img/backbone.svg" alt="Backbone" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-
-    <div class="memory-card" data-framework="react">
-      <img class="front-face" src="img/react.svg" alt="React" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="react">
-      <img class="front-face" src="img/react.svg" alt="React" />
-      <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-    </div>
-  </section>
-
-  <script src="scripts.js"></script>
-</body>
-</html>
