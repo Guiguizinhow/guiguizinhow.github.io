@@ -11,20 +11,20 @@ var y=400;
 var xd;
 var yd;
 var estadoDisparo= false;
-
-//let imgJogador;
-//function preload() {
- // imgJogador = loadImage('seta.jpg');
-//}
+var imgJogo;
+function preload()
+{
+  imgJogo = loadImage('jogo.jpg');
+}
 function setup() {
   createCanvas(500, 400);
 }
 
 function draw() {
-  background(220);
+  background(imgJogo);
   ellipse(X,y,50,50);
- // imageMode(CENTER);
-  //image(imgJogador,X,y);
+// imageMode(CENTER);
+ // image(imgJogo,0,0);
   if(keyIsDown(RIGHT_ARROW)){
     X=X+5;
   }
@@ -41,7 +41,7 @@ function draw() {
  if(X>width)
   X=0;
  if(estadoDisparo==false)
-
+ 
    {  
   xd=X
   yd = y
@@ -54,12 +54,7 @@ function draw() {
   if(yd<0)
     {
    estadoDisparo = false;
-  }
- 
- 
-
-  
-  
+  }  
 }
 }
  </script>
