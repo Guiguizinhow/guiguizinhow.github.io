@@ -1,9 +1,10 @@
-<html>
+html><html>
 <head>
   <meta charset="UTF-8">
-  <script src="https://github.com/processing/p5.js/releases/download/0.5.16/p5.js"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-  <script>
+  <meta name="viewport" content="width=device-width" />
+  <title>z</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 var xo = 0;
 var yo = 50;
 var X=100;
@@ -62,11 +63,11 @@ function draw() {
   
 }
 }
- </script>
+ <script/>
+ <body>
+  <h1>z</h1>
+  <div id="test"></div>
 
-  <style> body {padding: 0; margin: 0;} </style>
-</head>
-
-<body>
+  <script src="script.js"></script>
 </body>
 </html>
