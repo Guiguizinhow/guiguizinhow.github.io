@@ -5,7 +5,7 @@ var yo = 50;
 
 let imgJogador;
 function preload() {
-  imgJogador = loadImage('assets/laDefense.jpg');
+  imgJogador = loadImage('seta.jpg');
 }
 function setup() {
   createCanvas(500, 500);
