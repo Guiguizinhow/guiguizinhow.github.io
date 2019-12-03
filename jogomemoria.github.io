@@ -62,3 +62,11 @@ function draw() {
   
 }
 }
+ </script>
+
+  <style> body {padding: 0; margin: 0;} </style>
+</head>
+
+<body>
+</body>
+</html>
