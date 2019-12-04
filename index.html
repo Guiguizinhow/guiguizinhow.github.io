@@ -4,7 +4,7 @@
   <script src="https://github.com/processing/p5.js/releases/download/0.5.16/p5.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
   <script>
-var cena=1;
+
 var x = 25;
 var y = 15;
 //1 - jogar
@@ -12,49 +12,35 @@ var y = 15;
 //3 - sair
 var opcao = 1 
 var telaAtiva = 1;
-var xa,ya
-xa = 1
-ya = 1
+
 var imgmenu;
 function preload() {
- imgmenu = loadImage('jogolopbg.jpg');  
-}
+imgmenu = loadImage('jogolopbg.jpg');  
+
 function setup() {
   createCanvas(700, 400);
 }
-function draw()
-{
+}
   
-  background("#215E21");
+
+function draw() {
+  
   switch(telaAtiva) {
     case 1:
       menu();
       break;
     case 2:
       regras();
-      break;
-      
+      break;  
     case 3:
       sair();
-      break;
-    
+      break; 
   }
 }
-function jogar() {
-   //R, G, B
-   
-  fill('white');
-  stroke('black');
-  strokeWeight(1);
-  
-  textSize(28);
-  fill('black');
-  
-  
-  window.close();
-}
+
 function sair() {
    //R, G, B
+ background('red');
    
   fill('white');
   stroke('black');
@@ -66,55 +52,57 @@ function sair() {
   text('saindo', 40, 55);
   window.close();
 }
+
+
 function regras() {
-   //R, G, B
-   
+  /// R, G, B
+background('red');
   fill('white');
   stroke('black');
   strokeWeight(1);
   
-  textSize(27);
+  textSize(28);
   fill('black');
   
-  text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases,"  + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + "o objetivo do jogador é capiturar os animais" + "\n" + " pertencentes a cada classe referente a fase." + "\n" +  " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" + "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" + "\n" + " perca as 5 vidas.", 40, 50);
+  text(" Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases,"  + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + "o objetivo do jogador é capiturar os animais" + "\n" + " pertencentes a cada classe referente a fase." + "\n" +  " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" + "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" + "\n" + " perca as 5 vidas.", 40, 55);
 }
+
 function menu() {
   //R, G, B
-  background(imgmenu)
+background(imgmenu);
   fill('white');
   stroke('black');
   strokeWeight(1);
-  rect(30, 20, 120, 55, 20);
+  rect(30, 20, 120, 55, 10);
   rect(30, 90, 120, 55, 10);
   rect(30, 160, 120, 55, 10);
   
   textSize(32);
-  fill('purple');
+  fill('black');
   
   text('Jogar', 40, 55);
   text('Regras', 40, 125);
   text('Sair', 40, 195);
   
   noFill();
-  stroke(255,200,0);
+  stroke(255,200, 0);
   strokeWeight(4);
   rect(x, y, 130, 65);
-  stroke(0, 0, 0);
-  strokeWeight(2)
+   
 }
+
 function keyPressed() {
   console.log(keyCode);
   
-  /*if(telaAtiva==2 || telaAtiva==3)
-      telaAtiva
-        =1;*/
+  if(telaAtiva==2 || telaAtiva==3)
+      telaAtiva=1;
   
   if (keyCode === ENTER) 
       telaAtiva=opcao;
      
   if (keyCode === DOWN_ARROW) {
     if(y<155) {
-       y=y+70;
+       y+=70;
        if(opcao==1)
            opcao=2;
        else 
@@ -134,17 +122,9 @@ function keyPressed() {
        }
     }
    
- }
+  }
   console.log("opcao: "+opcao);
   console.log("telaAtiva: "+telaAtiva);
-  {}
-  
-  
-  
-  
-  
-  
-  
 }
  </script>
 
