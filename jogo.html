@@ -9,6 +9,7 @@
 
   </head>
   <script>
+
 var xo = 0;
 var yo = 50;
 var X=100;
@@ -17,9 +18,17 @@ var xd;
 var yd;
 var estadoDisparo= false;
 var imgJogo;
+var vidas = 3;
+var pontos = 0;
+var nivel = 1;
+
+
 function preload()
 {
+ 
   imgJogo = loadImage('imgJogo.jpg');
+  imgG = loadImage('girafa.jpg')
+  
 }
 function setup() {
   createCanvas(500, 400);
@@ -27,9 +36,35 @@ function setup() {
 
 function draw() {
   background(imgJogo);
-  ellipse(X,y,50,50);
-// imageMode(CENTER);
- // image(imgJogo,0,0);
+  function menu()
+{
+  //background(imgJogo)
+}
+{
+  fill('white');
+  stroke('black');
+  strokeWeight(1);
+  
+  textSize(32);
+  fill(0,255,0);
+  text("vidas: "+ vidas,50,30);
+ text("pontos: "+ pontos,190,30);
+ text("Nível: "+ nivel, 350,30);
+  //oFill();
+  //troke(255,200,0);
+ //strokeWeight(4);
+  //rect(x, y, 130, 65);
+stroke(0, 0, 0);
+  //strokeWeight(2)
+}
+  { // bola g
+   
+    
+  ellipse(X,y,70,70);{
+  fill('purple');}
+    
+ //imageMode(CENTER);
+  //image(imgG,0,0);
   if(keyIsDown(RIGHT_ARROW)){
     X=X+5;
   }
@@ -42,26 +77,32 @@ function draw() {
   if(keyIsDown(LEFT_ARROW)){
     X=X-5;
  }
- 
+  }
  if(X>width)
   X=0;
+  
  if(estadoDisparo==false)
- 
    {  
   xd=X
   yd = y
   estadoDisparo=true
  }
+  
  if(estadoDisparo==true)
   {
- ellipse(xd,yd,4,4)
+    //  bola p
+    {
+ ellipse(xd,yd,12,12)
+  fill(0,255,0);}  
  yd=yd - 10
   if(yd<0)
+    
     {
    estadoDisparo = false;
   }  
+    
 }
-}
+  }
  </script>
 
   <body>
