@@ -69,88 +69,6 @@ background('rgba(0,255,0, 0.25)');
   text(
     " Aqui vao as regras:"+ "\n" + "o jogo possui cinco fases,"  + "onde as fases são" + "\n"+ "relacionadas as classe dos animais."+ "\n" + "o objetivo do jogador é capiturar os animais" + "\n" + " pertencentes a cada classe referente a fase." + "\n" +  " o jogador tem 5 vidas durante todas as fases." + "\n" + " Ao capturar o animal que não pertence a" + "\n" + "classe refernte a fase, o jogador perdera" + "\n"+ " uma vida, voltando à primeira fase caso" + "\n" + " perca as 5 vidas.", 40, 55);
 }
-function jogar() {
-  function preload()
-{
- 
-  imgJogo = loadImage('imgJogo.jpg');
-  imgG = loadImage('girafa.jpg')
-  
-}
-function setup() {
-  createCanvas(500, 400);
-}
-
-function draw() {
-  background(imgJogo);
-  function menu()
-{
-  //background(imgJogo)
-}
-{
-  fill('white');
-  stroke('black');
-  strokeWeight(1);
-  
-  textSize(32);
-  fill(0,255,0);
-  text("vidas: "+ vidas,50,30);
- text("pontos: "+ pontos,190,30);
- text("Nível: "+ nivel, 350,30);
-  //oFill();
-  //troke(255,200,0);
- //strokeWeight(4);
-  //rect(x, y, 130, 65);
-stroke(0, 0, 0);
-  //strokeWeight(2)
-}
-  { // bola g
-   
-    
-  ellipse(X,y,70,70);{
-  fill('purple');}
-    
- //imageMode(CENTER);
-  //image(imgG,0,0);
-  if(keyIsDown(RIGHT_ARROW)){
-    X=X+5;
-  }
-  if(keyIsDown(UP_ARROW)){
-    X=X-5;
-  }
-  if(keyIsDown(DOWN_ARROW)){
-    X=X+5;
-  }
-  if(keyIsDown(LEFT_ARROW)){
-    X=X-5;
- }
-  }
- if(X>width)
-  X=0;
-  
- if(estadoDisparo==false)
-   {  
-  xd=X
-  yd = y
-  estadoDisparo=true
- }
-  
- if(estadoDisparo==true)
-  {
-    //  bola p
-    {
- ellipse(xd,yd,12,12)
-  fill(0,255,0);}  
- yd=yd - 10
-  if(yd<0)
-    
-    {
-   estadoDisparo = false;
-  }  
-    
-}
-  }
-}
 
 function menu() {
   //R, G, B
@@ -217,12 +135,6 @@ function keyPressed() {
   console.log("opcao: "+opcao);
   console.log("telaAtiva: "+telaAtiva);
 
-  
-  
-  
-  
-  
-  
   
 }
  </script>
